@@ -1,0 +1,19 @@
+@use "./variable" as *;
+
+// メディアクエリ
+@mixin mq($width, $breakpoint: "", $leftOpen: true) {
+  $_viewport: if($breakpoint != "", map-get($breakpoints, $breakpoint), 0);
+  $_decimalPoint: 0.02;
+
+  @if $width == "min" {
+    @media screen and (min-width: #{$_viewport + if($leftOpen, $_decimalPoint, 0)}) {
+      @content;
+    }
+  }
+
+  @if $width == "max" {
+    @media screen and (max-width: #{$_viewport - if($leftOpen, 0, $_decimalPoint)}) {
+      @content;
+    }
+  }
+}

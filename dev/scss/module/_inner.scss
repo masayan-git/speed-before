@@ -1,0 +1,16 @@
+@use "../utils/utils" as *;
+
+.inner {
+  width: 100%;
+  max-width: $inner + strip-unit($padding-pc) * 2;
+  padding-right: $padding-pc;
+  padding-left: $padding-pc;
+
+  @include mq("max", "md") {
+    max-width: 100%;
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
