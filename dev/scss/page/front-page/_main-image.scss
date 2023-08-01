@@ -1,0 +1,57 @@
+@use '../../utils/utils' as *;
+.mainImage {
+  width: calc(100% - 200px);
+  @include mq("max", "lg") {
+    width: 100%;
+  }
+  .mainImage__swiper {
+    // width: 100%;
+    height: 735px;
+    position: relative;
+
+    .swiper-slide {
+      // aspect-ratio: 1080 / 735;
+      
+      width: 100%;
+      height: 100%;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    // .swiper-image {
+    //   width: 100%;
+    //   height: 100%;
+    // }
+
+    @keyframes zoomUp {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.15);
+      }
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      top: auto;
+      bottom: 5px;
+      left: 5px;
+      width: fit-content;
+
+      .swiper-pagination-bullet {
+        background-color: $white;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #D59B71;
+      }
+
+    }
+    
+  }
+}
