@@ -2,7 +2,7 @@
 /* リキッドレイアウト対応 */
 @font-face {
   font-family: "MyFont";
-  src: url("/font/PlaylistScript.otf") format("opentype");
+  src: url("../font/PlaylistScript.otf") format("opentype");
 }
 body {
   font-family: "Noto Sans JP", sans-serif;

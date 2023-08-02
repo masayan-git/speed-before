@@ -23,7 +23,7 @@ $second-font-family: "";
 
 @font-face {
   font-family: 'MyFont';
-  src: url('/font/PlaylistScript.otf') format('opentype');
+  src: url('../font/PlaylistScript.otf') format('opentype');
 }
 $title-font-family: 'MyFont', sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
