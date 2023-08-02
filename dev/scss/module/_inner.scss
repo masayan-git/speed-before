@@ -1,16 +1,24 @@
-@use "../utils/utils" as *;
+@use "global" as *;
 
 .inner {
   width: 100%;
-  max-width: $inner + strip-unit($padding-pc) * 2;
-  padding-right: $padding-pc;
-  padding-left: $padding-pc;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
 
-  @include mq("max", "md") {
-    max-width: 100%;
-    padding-right: $padding-sp;
-    padding-left: $padding-sp;
+.pc-inner {
+  @include mq("md") {
     margin-right: auto;
     margin-left: auto;
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
   }
 }
