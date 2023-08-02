@@ -52,7 +52,7 @@ function php() {
 
 function serve() {
   browserSync.init({
-    proxy: "localhost:3000", // ローカル開発URLを入力してください
+    proxy: "localhost:10079", // ローカル開発URLを入力してください
   });
 
   watch("dev/scss/**/*.scss", styles);
